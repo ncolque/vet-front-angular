@@ -2,7 +2,7 @@
   <h1>Listado de Mascotas</h1>
 </div>
 <app-spinner *ngIf="loading"></app-spinner>
-<div *ngIf="dataSource.data.length > 0" class="container">
+<div class="container">
   <mat-form-field>
     <mat-label>Buscar</mat-label>
     <input
@@ -60,7 +60,7 @@
           aria-label="Example home icon"
           fontIcon="home"
           matTooltip="Editar"
-          routerLink="/editarMascota/1"
+          routerLink="/editarMascota/{{ element.id }}"
           >edit</mat-icon
         >
         <mat-icon
